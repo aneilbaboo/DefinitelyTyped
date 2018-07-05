@@ -639,12 +639,12 @@ export interface StringSchema extends AnySchema {
     /**
      * Requires the string value to be all lowercase. If the validation convert option is on (enabled by default), the string will be forced to lowercase.
      */
-    lowercase(): this;
+    lowercase(opts?: { force: boolean }): this;
 
     /**
      * Requires the string value to be all uppercase. If the validation convert option is on (enabled by default), the string will be forced to uppercase.
      */
-    uppercase(): this;
+    uppercase(opts?: { force: boolean }): this;
 
     /**
      * Requires the string value to contain no whitespace before or after. If the validation convert option is on (enabled by default), the string will be trimmed.
